@@ -1,0 +1,116 @@
+<!-- login view -->
+<mvc:View controllerName="PMA.controller.Details" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:customControls="PMA.controls" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:uiTable="sap.ui.table">
+	<Page title="{i18n&gt;Title}">
+		<content>
+			<VBox class="sapUiSmallMargin homeVBox">
+				<!-- first box content-->
+				<HBox class="homeHBox1 sapUiMediumMarginBeginEnd">
+					<FlexBox class="homeHBox11" justifyContent="Start">
+						<items>
+							<Label class="sapUiSmallMarginTop " text="week:"/>
+							<core:Icon class="sapUiSmallMarginTop sapUiSmallMarginBegin" color="gray" src="sap-icon://nav-back"/>
+							<Text class="label1 sapUiSmallMarginTop sapUiTinyMarginBeginEnd" text="32"/>
+							<core:Icon class="sapUiSmallMarginTop sapUiTinyMarginEnd" color="gray" src="sap-icon://navigation-right-arrow"/>
+							<Label class="sapUiSmallMarginTop sapUiSmallMarginBegin" text="Site:"/>
+							<Select class="sBox sapUiTinyMarginBegin" forceSelection="false" selectedKey="1">
+								<core:Item key="1" text="INTEL-FAB D1X,Hillsboro, Oregon"/>
+								<core:Item key="2" text="INTEL-FAB D2X,Hillsboro, Oregon"/>
+							</Select>
+						</items>
+					</FlexBox>
+				</HBox>
+				<!-- second box content-->
+				<HBox class="homeHBox2 sapUiMediumMarginBeginEnd ">
+					<FlexBox class="homeHBox21" justifyContent="Start">
+						<items>
+							<Label class="sapUiSmallMarginTop " text="Machine type:"/>
+							<Text class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd bold" text="{selectedRowObject&gt;/type}"/>
+							<Label class="sapUiSmallMarginTop sapUiTinyMarginBegin" text="ASML ID:"/>
+							<Text class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd bold" text="{selectedRowObject&gt;/asmlId}"/>
+							<Label class="sapUiSmallMarginTop sapUiTinyMarginBegin" text="CUSTOMER ID:"/>
+							<Text class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd bold" text="{selectedRowObject&gt;/customerId}"/>
+						</items>
+					</FlexBox>
+				</HBox>
+				<!-- third box content-->
+				<HBox>
+					<VBox class="sapUiMediumMarginBegin sapUiMediumMarginTop" width="70%">
+						<HBox class="gHBox">
+							<Label class="sapUiTinyMarginEnd" text=""/>
+							<customControls:CustomBar data="{mockData&gt;/weekInformation}" class="weekLabels" measure="date" type="week"/>
+						</HBox>
+						<HBox class="gHBox sapUiMediumMarginBottom">
+							<Label class="sapUiTinyMarginEnd" text="System (computed)"/>
+							<customControls:CustomBar data="{selectedRowObject&gt;/system}" measure="duration" type="bar"/>
+						</HBox>
+						<HBox class="gHBox ">
+							<Label class="sapUiTinyMarginEnd" text="Scanner"/>
+							<customControls:CustomBar data="{selectedRowObject&gt;/scanner}" measure="duration" type="bar"/>
+						</HBox>
+						<HBox class="gHBox">
+							<Label class="sapUiTinyMarginEnd" text="Source"/>
+							<customControls:CustomBar data="{selectedRowObject&gt;/source}" measure="duration" type="bar"/>
+						</HBox>
+						<HBox class="gHBox">
+							<Label class="sapUiTinyMarginEnd" text=""/>
+							<customControls:CustomBar data="{mockData&gt;/legends}" class="legendLabels sapUiTinyMarginTop" measure="color" type="legend"/>
+						</HBox>
+					</VBox>
+					<VBox class="sapUiTinyMarginTop" width="10%">
+						<Label class="sapUiLargeMarginTop sapUiTinyMarginBegin line" text=""/>
+					</VBox>
+					<VBox class="VBoxLargeLabelSection" width="20%">
+						<Label class="blue large sapUiMediumMarginTop" text="{selectedRowObject&gt;/supplierUptime}" width="60%"/>
+						<Label class="grey sapUiMediumMarginTop" text="weekly Supplier dependent Uptime % for system as a whole" width="60%"/>
+					</VBox>
+				</HBox>
+				<!-- Fourth box content-->
+				<HBox class="homeHBox4 sapUiMediumMarginBeginEnd sapUiMediumMarginTop">
+					<IconTabBar class="sapUiResponsiveContentPadding" expanded="{device&gt;/isNoPhone}" id="idIconTabBarNoIcons">
+						<items>
+							<IconTabFilter text="Scanner and Source">
+								<uiTable:TreeTable ariaLabelledBy="title" enableSelectAll="false" id="TreeTableBasic" rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}" selectionMode="SingleSelectMaster">
+									<uiTable:columns>
+										<uiTable:Column width="13rem">
+											<Label text="Categories"/>
+											<uiTable:template>
+												<Text text="{name}"/>
+											</uiTable:template>
+										</uiTable:Column>
+										<uiTable:Column width="9rem">
+											<Label text="Price"/>
+											<uiTable:template>
+												<u:Currency currency="{currency}" value="{amount}"/>
+											</uiTable:template>
+										</uiTable:Column>
+										<uiTable:Column width="11rem">
+											<Label text="Size"/>
+											<uiTable:template>
+												<Select forceSelection="false" items="{path: '/sizes', templateShareable: true}" selectedKey="{size}" visible="{= !!${size}}">
+													<core:Item key="{key}" text="{value}"/>
+												</Select>
+											</uiTable:template>
+										</uiTable:Column>
+									</uiTable:columns>
+								</uiTable:TreeTable>
+							</IconTabFilter>
+							<IconTabFilter text="System(computed)"/>
+						</items>
+					</IconTabBar>
+				</HBox>
+			</VBox>
+		</content>
+		<footer>
+			<Bar class="customFooter">
+				<contentLeft>
+					<Label class="footerlabel" text="Reconciliation Status"/>
+					<Text class="footerText" text="Not Yet Reconciled"/>
+				</contentLeft>
+				<contentRight>
+					<Button class="footerbtn1" press="" text="Finish reconciliation For this Period" tooltip="filter" type="Emphasized"/>
+					<Button class="sapUiTinyMarginBegin footerbtn2" text="Cancel"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

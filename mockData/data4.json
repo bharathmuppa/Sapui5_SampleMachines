@@ -1,0 +1,566 @@
+{
+	"legends": [{
+		"name": "PRD",
+		"color": "#96CE63"
+	}, {
+		"name": "SBY",
+		"color": "#F9DD1A"
+	}, {
+		"name": "ENG",
+		"color": "#049AF8"
+	}, {
+		"name": "SDT",
+		"color": "#E96793"
+	}, {
+		"name": "UDT",
+		"color": "#F04534"
+	}, {
+		"name": "NST",
+		"color": "#99989D"
+	}, {
+		"name": "UNK",
+		"color": "#F4F4F4"
+	}],
+	"weekInformation": [{
+		"day": "M",
+		"date": "Aug 2nd"
+	}, {
+		"day": "T",
+		"date": "Aug 3rd"
+	}, {
+		"day": "W",
+		"date": "Aug 4th"
+	}, {
+		"day": "T",
+		"date": "Aug 5th"
+	}, {
+		"day": "F",
+		"date": "Aug 6th"
+	}, {
+		"day": "S",
+		"date": "Aug 7th"
+	}, {
+		"day": "S",
+		"date": "Aug 8th"
+	}],
+	"tableCollection": [{
+		"status": true,
+		"type": "NXE3350B",
+		"asmlId": "1234",
+		"customerId": "S-6712452",
+
+		"system": [{
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 2nd",
+				"startTime": "0:00",
+				"endDate": "Aug 2nd",
+				"endTime": "14:00",
+				"duration": "14:00",
+				"subStates": []
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 2nd",
+				"startTime": "14:00",
+				"endDate": "Aug 2nd",
+				"endTime": "21:23",
+				"duration": "7:23",
+				"subStates": []
+			}, {
+				"state": "UDT DC-0142/A",
+				"color": "F04534",
+				"startDate": "Aug 2nd",
+				"startTime": "21:23",
+				"endDate": "Aug 3rd",
+				"endTime": "02:44",
+				"duration": "5:21",
+				"subStates": [{
+						"state": "DIAG",
+						"startDate": "Aug 2nd",
+						"startTime": "21:23",
+						"endDate": "Aug 2nd",
+						"endTime": "22:46",
+						"duration": "1:23"
+					}, {
+						"state": "Wait Part",
+						"startDate": "Aug 2nd",
+						"startTime": "22:46",
+						"endDate": "Aug 2nd",
+						"endTime": "23:00",
+						"duration": "0:14"
+					}, {
+						"state": "Repair",
+						"startDate": "Aug 2nd",
+						"startTime": "23:00",
+						"endDate": "Aug 3rd",
+						"endTime": "02:12",
+						"duration": "3:12"
+					}, {
+						"state": "Stabilize",
+						"startDate": "Aug 3rd",
+						"startTime": "02:12",
+						"endDate": "Aug 3rd",
+						"endTime": "02:30",
+						"duration": "0:18"
+					}, {
+						"state": "Metro",
+						"startDate": "Aug 3rd",
+						"startTime": "02:30",
+						"endDate": "Aug 3rd",
+						"endTime": "02:44",
+						"duration": "0:14"
+					}
+
+				]
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 3rd",
+				"startTime": "02:44",
+				"endDate": "Aug 3rd",
+				"endTime": "8:00",
+				"duration": "5:16",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 3rd",
+				"startTime": "8:00",
+				"endDate": "Aug 3rd",
+				"endTime": "17:00",
+				"duration": "9:00",
+				"subStates": []
+			}, {
+				"state": "NST",
+				"color": "99989D",
+				"startDate": "Aug 3rd",
+				"startTime": "17:00",
+				"endDate": "Aug 7th",
+				"endTime": "22:00",
+				"duration": "101:00",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 7th",
+				"startTime": "22:00",
+				"endDate": "Aug 8th",
+				"endTime": "02:00",
+				"duration": "4:00",
+				"subStates": []
+			}, {
+				"state": "SDT",
+				"color": "E96793",
+				"startDate": "Aug 8th",
+				"startTime": "02:00",
+				"endDate": "Aug 8th",
+				"endTime": "24:00",
+				"duration": "12:00",
+				"subStates": []
+			}
+
+		],
+		"scanner": [{
+			"state": "PRD",
+			"color": "96CE63",
+			"startDate": "Aug 2nd",
+			"startTime": "0:00",
+			"endDate": "Aug 4th",
+			"endTime": "8:00",
+			"duration": "56:00",
+			"subStates": []
+		}, {
+			"state": "ENG",
+			"color": "049AF8",
+			"startDate": "Aug 4th",
+			"startTime": "8:00",
+			"endDate": "Aug 5th",
+			"endTime": "17:00",
+			"duration": "33:00",
+			"subStates": []
+		}, {
+			"state": "PRD",
+			"color": "96CE63",
+			"startDate": "Aug 5th",
+			"startTime": "17:00",
+			"endDate": "Aug 8th",
+			"endTime": "23:59",
+			"duration": "102:59",
+			"subStates": []
+		}],
+		"source": [{
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 2nd",
+				"startTime": "0:00",
+				"endDate": "Aug 2nd",
+				"endTime": "14:00",
+				"duration": "14:00",
+				"subStates": []
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 2nd",
+				"startTime": "14:00",
+				"endDate": "Aug 2nd",
+				"endTime": "21:23",
+				"duration": "7:23",
+				"subStates": []
+			}, {
+				"state": "UDT DC-0142/A",
+				"color": "F04534",
+				"startDate": "Aug 2nd",
+				"startTime": "21:23",
+				"endDate": "Aug 3rd",
+				"endTime": "02:44",
+				"duration": "5:21",
+				"subStates": [{
+						"state": "DIAG",
+						"startDate": "Aug 2nd",
+						"startTime": "21:23",
+						"endDate": "Aug 2nd",
+						"endTime": "22:46",
+						"duration": "1:23"
+					}, {
+						"state": "Wait Part",
+						"startDate": "Aug 2nd",
+						"startTime": "22:46",
+						"endDate": "Aug 2nd",
+						"endTime": "23:00",
+						"duration": "0:14"
+					}, {
+						"state": "Repair",
+						"startDate": "Aug 2nd",
+						"startTime": "23:00",
+						"endDate": "Aug 3rd",
+						"endTime": "02:12",
+						"duration": "3:12"
+					}, {
+						"state": "Stabilize",
+						"startDate": "Aug 3rd",
+						"startTime": "02:12",
+						"endDate": "Aug 3rd",
+						"endTime": "02:30",
+						"duration": "0:18"
+					}, {
+						"state": "Metro",
+						"startDate": "Aug 3rd",
+						"startTime": "02:30",
+						"endDate": "Aug 3rd",
+						"endTime": "02:44",
+						"duration": "0:14"
+					}
+
+				]
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 3rd",
+				"startTime": "02:44",
+				"endDate": "Aug 3rd",
+				"endTime": "8:00",
+				"duration": "5:16",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 3rd",
+				"startTime": "8:00",
+				"endDate": "Aug 3rd",
+				"endTime": "17:00",
+				"duration": "9:00",
+				"subStates": []
+			}, {
+				"state": "NST",
+				"color": "99989D",
+				"startDate": "Aug 3rd",
+				"startTime": "17:00",
+				"endDate": "Aug 7th",
+				"endTime": "22:00",
+				"duration": "101:00",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 7th",
+				"startTime": "22:00",
+				"endDate": "Aug 8th",
+				"endTime": "02:00",
+				"duration": "4:00",
+				"subStates": []
+			}, {
+				"state": "SDT",
+				"color": "E96793",
+				"startDate": "Aug 8th",
+				"startTime": "02:00",
+				"endDate": "Aug 8th",
+				"endTime": "24:00",
+				"duration": "12:00",
+				"subStates": []
+			}
+
+		],
+		"dataCompleteness": "100",
+		"supplierUptime": "85,6"
+	}, {
+		"status": false,
+		"type": "NXE330",
+		"asmlId": "4567",
+		"customerId": "S-7848912",
+		"system": [{
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 2nd",
+				"startTime": "0:00",
+				"endDate": "Aug 2nd",
+				"endTime": "14:00",
+				"duration": "14:00",
+				"subStates": []
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 2nd",
+				"startTime": "14:00",
+				"endDate": "Aug 2nd",
+				"endTime": "21:30",
+				"duration": "7:30",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 2nd",
+				"startTime": "21:30",
+				"endDate": "Aug 3rd",
+				"endTime": "17:00",
+				"duration": "20:30",
+				"subStates": []
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 3rd",
+				"startTime": "17:00",
+				"endDate": "Aug 4th",
+				"endTime": "8:00",
+				"duration": "15:00",
+				"subStates": []
+			}, {
+				"state": "UDT DC-0142/A",
+				"color": "F04534",
+				"startDate": "Aug 4th",
+				"startTime": "8:00",
+				"endDate": "Aug 6th",
+				"endTime": "12:00",
+				"duration": "52:00",
+				"subStates": [{
+						"state": "DIAG",
+						"startDate": "Aug 4th",
+						"startTime": "8:00",
+						"endDate": "Aug 4th",
+						"endTime": "12:00",
+						"duration": "4:00"
+					}, {
+						"state": "Wait Part",
+						"startDate": "Aug 4th",
+						"startTime": "12:00",
+						"endDate": "Aug 4th",
+						"endTime": "24:00",
+						"duration": "12:00"
+					}, {
+						"state": "Repair",
+						"startDate": "Aug 4th",
+						"startTime": "24:00",
+						"endDate": "Aug 5th",
+						"endTime": "02:00",
+						"duration": "2:00"
+					}, {
+						"state": "Stabilize",
+						"startDate": "Aug 5th",
+						"startTime": "02:00",
+						"endDate": "Aug 6th",
+						"endTime": "02:00",
+						"duration": "24:00"
+					}, {
+						"state": "Metro",
+						"startDate": "Aug 6th",
+						"startTime": "02:00",
+						"endDate": "Aug 6th",
+						"endTime": "12:00",
+						"duration": "10:00"
+					}
+
+				]
+			}, {
+				"state": "NST",
+				"color": "99989D",
+				"startDate": "Aug 6th",
+				"startTime": "12:00",
+				"endDate": "Aug 7th",
+				"endTime": "22:00",
+				"duration": "34:00",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 7th",
+				"startTime": "22:00",
+				"endDate": "Aug 8th",
+				"endTime": "02:00",
+				"duration": "4:00",
+				"subStates": []
+			}, {
+				"state": "SDT",
+				"color": "E96793",
+				"startDate": "Aug 8th",
+				"startTime": "02:00",
+				"endDate": "Aug 8th",
+				"endTime": "24:00",
+				"duration": "12:00",
+				"subStates": []
+			}
+
+		],
+		"scanner": [{
+			"state": "PRD",
+			"color": "96CE63",
+			"startDate": "Aug 2nd",
+			"startTime": "0:00",
+			"endDate": "Aug 4th",
+			"endTime": "8:00",
+			"duration": "56:00",
+			"subStates": []
+		}, {
+			"state": "ENG",
+			"color": "049AF8",
+			"startDate": "Aug 4th",
+			"startTime": "8:00",
+			"endDate": "Aug 5th",
+			"endTime": "17:00",
+			"duration": "33:00",
+			"subStates": []
+		}, {
+			"state": "PRD",
+			"color": "96CE63",
+			"startDate": "Aug 5th",
+			"startTime": "17:00",
+			"endDate": "Aug 8th",
+			"endTime": "23:59",
+			"duration": "102:59",
+			"subStates": []
+		}],
+		"source": [{
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 2nd",
+				"startTime": "0:00",
+				"endDate": "Aug 2nd",
+				"endTime": "14:00",
+				"duration": "14:00",
+				"subStates": []
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 2nd",
+				"startTime": "14:00",
+				"endDate": "Aug 2nd",
+				"endTime": "21:30",
+				"duration": "7:30",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 2nd",
+				"startTime": "21:30",
+				"endDate": "Aug 3rd",
+				"endTime": "17:00",
+				"duration": "20:30",
+				"subStates": []
+			}, {
+				"state": "STBY",
+				"color": "F9DD1A",
+				"startDate": "Aug 3rd",
+				"startTime": "17:00",
+				"endDate": "Aug 4th",
+				"endTime": "8:00",
+				"duration": "15:00",
+				"subStates": []
+			}, {
+				"state": "UDT DC-0142/A",
+				"color": "F04534",
+				"startDate": "Aug 4th",
+				"startTime": "8:00",
+				"endDate": "Aug 6th",
+				"endTime": "12:00",
+				"duration": "52:00",
+				"subStates": [{
+						"state": "DIAG",
+						"startDate": "Aug 4th",
+						"startTime": "8:00",
+						"endDate": "Aug 4th",
+						"endTime": "12:00",
+						"duration": "4:00"
+					}, {
+						"state": "Wait Part",
+						"startDate": "Aug 4th",
+						"startTime": "12:00",
+						"endDate": "Aug 4th",
+						"endTime": "24:00",
+						"duration": "12:00"
+					}, {
+						"state": "Repair",
+						"startDate": "Aug 4th",
+						"startTime": "24:00",
+						"endDate": "Aug 5th",
+						"endTime": "02:00",
+						"duration": "2:00"
+					}, {
+						"state": "Stabilize",
+						"startDate": "Aug 5th",
+						"startTime": "02:00",
+						"endDate": "Aug 6th",
+						"endTime": "02:00",
+						"duration": "24:00"
+					}, {
+						"state": "Metro",
+						"startDate": "Aug 6th",
+						"startTime": "02:00",
+						"endDate": "Aug 6th",
+						"endTime": "12:00",
+						"duration": "10:00"
+					}
+
+				]
+			}, {
+				"state": "NST",
+				"color": "99989D",
+				"startDate": "Aug 6th",
+				"startTime": "12:00",
+				"endDate": "Aug 7th",
+				"endTime": "22:00",
+				"duration": "34:00",
+				"subStates": []
+			}, {
+				"state": "PRD",
+				"color": "96CE63",
+				"startDate": "Aug 7th",
+				"startTime": "22:00",
+				"endDate": "Aug 8th",
+				"endTime": "02:00",
+				"duration": "4:00",
+				"subStates": []
+			}, {
+				"state": "SDT",
+				"color": "E96793",
+				"startDate": "Aug 8th",
+				"startTime": "02:00",
+				"endDate": "Aug 8th",
+				"endTime": "24:00",
+				"duration": "12:00",
+				"subStates": []
+			}
+
+		],
+		"dataCompleteness": "100",
+		"supplierUptime": "95,6"
+	}]
+}

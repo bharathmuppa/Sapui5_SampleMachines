@@ -1,0 +1,41 @@
+<!-- login view -->
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="PMA.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Page title="{i18n>Title}" >
+		<content>
+	<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="loginForm" class="loginForm"
+					layout="ResponsiveGridLayout">					
+					<Label text="User Name" class="uLbl sapUiSmallMarginTop">
+						<layoutData>
+							<l:GridData span="L4 M4 S12"></l:GridData>
+						</layoutData>
+					</Label>
+					<Input id="idUserName" class="uName" value="{userData>/userName}" required="true">
+						<layoutData>
+							<l:GridData span="L8 M8 S12"></l:GridData>
+						</layoutData>
+					</Input>
+					<Label text="Password" class="pLbl sapUiSmallMarginTop">
+						<layoutData>
+							<l:GridData span="L4 M4 S12"></l:GridData>
+						</layoutData>
+					</Label>
+					<Input id="idPassword" class="pwd" value="{userData>/userPassword}" required="true" type="Password"
+						>
+						<layoutData>
+							<l:GridData span="L8 M8 S12"></l:GridData>
+						</layoutData>
+					</Input>
+					<Button class="lgnBtn sapUiSmallMarginTop" type="Emphasized" text="Login" press="loginSubmit" >
+						<layoutData>
+							<l:GridData class="lBtn" span="L12 M12 S12"></l:GridData>
+						</layoutData>
+					</Button>
+					<Text id="idAuthenticationValidation" text="Please enter valid username and password"
+						visible="false"></Text>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

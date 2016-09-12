@@ -1,0 +1,184 @@
+.sapMShellBrandingBar {
+    height: 0px;
+}
+
+.sapMPageHeader::before {
+    border-top-width: 0rem;
+}
+
+body {
+    overflow: hidden;
+    background:white;
+}
+.PMA{
+	background:white;
+}
+/*login page css start here*/
+
+.PMA .lgnBtn div{
+	width:75% !important;
+	margin:auto;
+}
+@media only screen and (min-width: 500px) {
+    .PMA .loginForm{
+    	width: 450px !important;
+        margin: 75px auto;
+    }
+    
+}
+
+/*login page css ends here*/
+
+
+/*home page css starts here*/
+.PMA .homeVBox{
+ 
+}
+.PMA .homeHBox1{
+
+}
+.PMA .homeVBox .homeHBox11{
+  width:50%;
+}
+.PMA .homeVBox .homeHBox12{
+width:50%;
+
+}
+.PMA .homeHBox2{
+	
+}
+.PMA .homeHBox2 .homeHBox21{
+	width:50%;
+}
+.PMA .homeHBox2 .homeHBox22{
+ width:50%; 
+
+}
+.PMA .icon{
+display: inline-block;
+}
+.PMA .circle{
+border-radius:50%;
+width:12px;
+height: 12px;
+background: red;
+}
+.PMA .sStatusIcon{
+width:25px;
+height: 25px;
+border-radius: 50%;
+background: green;
+}
+.PMA .sStatusIcon>.sapMFlexItem {
+width:100%;
+}
+.PMA .sStatusIcon>.sapMFlexItem span{
+line-height: 24px;
+}
+
+.PMA .homeHBox3{
+	
+}
+.PMA .homeHBox3 .homeHBox3VBox{
+	width:19%;
+
+}
+.PMA .homeHBox3 .homeHBox3VBox{
+	width:20%;
+}
+.PMA .homeHBox4{
+	
+}
+.PMA .homeHBox1 .sBox{
+	border :none;
+}
+.PMA .homeHBox1 .sBox label{
+	color:blue;
+	font-weight:bold;
+}
+.PMA .homeHBox1 .homeHBox11 .label1 {
+   font-weight:bold;
+   width:18px;
+}
+.PMA .bold{
+	font-weight:bold;
+}
+.PMA .roundB{
+	width:10px;
+	height:10px;
+	
+	border-radius:50%;
+}
+.PMA .homeTable tr th,.PMA .homeTable tr td{
+border:1px solid rgba(102, 102, 102, 0.3);
+    padding: .5rem .5rem;
+    vertical-align: middle;
+}
+.PMA .homeTable tbody tr{
+height:60px ;
+}
+ .PMA .gHBox div:nth-child(2){
+   width:85%;
+ }
+  .PMA .gHBox div:nth-child(1){
+   width:15%;
+   text-align: right;
+ }
+ .PMA .blue{
+ 	color:blue;
+
+ }
+ .PMA .grey{
+ 	color:rgba(102, 102, 102, 0.6);
+ }
+ .PMA .large{
+ 	font-size:35px;
+ 	font-weight:bold;
+ }
+ .PMA .VBoxLargeLabelSection div:nth-child(1){
+ 	height:20%;
+ }
+  .PMA .VBoxLargeLabelSection div:nth-child(2){
+ 	height:80%;
+ }
+  .PMA .VBoxLargeLabelSection div:nth-child(2) label{
+ 	white-space:normal !important;
+ 	width:80%;
+
+ }
+ .PMA .line{
+ 	width:80%;
+ 	height: 1px;
+    background:rgba(102, 102, 102, 0.6);
+ }
+ .PMA .customFooter{
+ 	background: white !important;
+ }
+ .PMA .customFooter .footerlabel{
+ 	color: rgba(102,102,102,0.7);
+ }
+ .PMA .customFooter .footerText{
+ 	color: black;
+ }
+ .PMA .customFooter .footerbtn1{
+ 	color: white;
+ }
+ 
+ .PMA .customFooter .footerbtn2 span{
+ 	width:60px;
+ 	color: black;
+ background: rgba(102,102,102,0.7);
+ }
+/*home page css ends here*/
+/*details page styles start here*/
+.PMA .weekLabels span{
+  font-size: 10px;
+  text-align: left;
+}
+.PMA .legendLabels {
+  text-align: left !important;
+  font-size: 10px;
+}
+
+
+/*details page styles end here*/

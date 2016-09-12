@@ -1,0 +1,139 @@
+<!-- login view -->
+<mvc:View controllerName="PMA.controller.Home" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:customControls="PMA.controls" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>Title}">
+		<content>
+			<VBox class="sapUiSmallMargin homeVBox">
+				<!-- first box content-->
+				<HBox class="homeHBox1 sapUiMediumMarginBeginEnd">
+					<FlexBox class="homeHBox11" justifyContent="Start">
+						<items>
+							<Label class="sapUiSmallMarginTop " text="week:"/>
+							<core:Icon class="sapUiSmallMarginTop sapUiSmallMarginBegin" color="gray" src="sap-icon://navigation-left-arrow"/>
+							<Text class="label1 sapUiSmallMarginTop sapUiTinyMarginBeginEnd" text="32"/>
+							<core:Icon class="sapUiSmallMarginTop sapUiTinyMarginEnd" color="gray" src="sap-icon://navigation-right-arrow"/>
+							<Label class="sapUiSmallMarginTop sapUiSmallMarginBegin" text="Site:"/>
+							<Select class="sBox sapUiTinyMarginBegin" forceSelection="false" selectedKey="1">
+								<core:Item key="1" text="INTEL-FAB D1X,Hillsboro, Oregon"/>
+								<core:Item key="2" text="INTEL-FAB D2X,Hillsboro, Oregon"/>
+							</Select>
+						</items>
+					</FlexBox>
+					<FlexBox class="homeHBox12 sapUiMediumMarginEnd" justifyContent="End">
+						<items>
+							<Label class="sapUiSmallMarginTop sapUiLargeMarginBegin" text="Country:"/>
+							<Select class="sBox sapUiTinyMarginBegin" forceSelection="false" selectedKey="1">
+								<core:Item key="1" text="USA"/>
+								<core:Item key="2" text="Netherlands"/>
+							</Select>
+							<Label class="sapUiSmallMarginTop sapUiSmallMarginBegin" text="Customer:"/>
+							<Select class="sBox sapUiTinyMarginBegin" forceSelection="false" selectedKey="1">
+								<core:Item key="1" text="INTEL-Mass-F17"/>
+								<core:Item key="2" text="INTEL-Mass-F18"/>
+							</Select>
+						</items>
+					</FlexBox>
+				</HBox>
+				<!-- second box content-->
+				<HBox class="homeHBox2 sapUiMediumMarginBeginEnd">
+					<FlexBox class="homeHBox21" justifyContent="Start">
+						<items>
+							<Label class="sapUiSmallMarginTop " text="Total number of ASML machines:"/>
+							<Text class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd bold" text="5"/>
+							<Label class="sapUiSmallMarginTop sapUiTinyMarginBegin" text="To be Reconciled:"/>
+							<Text class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd bold" text="2"/>
+						</items>
+					</FlexBox>
+					<FlexBox class="homeHBox22 sapUiMediumMarginEnd" justifyContent="End">
+						<items>
+							<Button height="20px" id="toggleFilterButton" press="toggleFilter" text="Show Filters"/>
+							<Button class="sapUiSmallMarginBegin" height="20px" press="applyFilter" text="Go" type="Emphasized"/>
+						</items>
+					</FlexBox>
+				</HBox>
+				<!-- third box content-->
+				<HBox class="homeHBox3 sapUiMediumMarginBeginEnd sapUiTinyMarginTop" visible="{filterData>/filter}">
+					<VBox class="homeHBox3VBox sapUiSmallMarginEnd">
+						<Label text="Type:"/>
+						<Select class="sBox " forceSelection="false" selectedKey="{filterData>/type}" items="{/tableCollection}" width="100%">
+							<core:Item key="{type}" text="{type}"/>
+							
+						</Select>
+					</VBox>
+					<VBox class="homeHBox3VBox sapUiSmallMarginEnd">
+						<Label text="ASML Id:"/>
+						<SearchField class="" value="{filterData>/asmlId}"/>
+					</VBox>
+					<VBox class="homeHBox3VBox sapUiSmallMarginEnd">
+						<Label text="Customer Id:"/>
+						<SearchField class="" value="{filterData>/customerId}"/>
+					</VBox>
+				<!-- 	<VBox class="homeHBox3VBox sapUiSmallMarginEnd">
+						<Label text="Supplier dependent uptime target:{filterData>/range}%"/>
+						<Slider class="" max="100" min="0" value="{filterData>/range}" width="100%"/>
+					</VBox>
+					<VBox class="homeHBox3VBox sapUiSmallMarginEnd">
+						<FlexBox alignItems="End" height="100%">
+							<items>
+								<Label class="sapUiSmallMarginBottom" text="only show below target"/>
+								<CheckBox id="cBox" selected="{filterData>/targetCheck}"/>
+							</items>
+						</FlexBox>
+					</VBox> -->
+				</HBox>
+				<!-- Fourth box content-->
+				<HBox class="homeHBox4 sapUiMediumMarginBeginEnd sapUiMediumMarginTop">
+					<Table  items="{/tableCollection}" class="homeTable" id="idProductsTable" inset="false" mode="SingleSelectMaster" selectionChange="handleRowSelection">
+						<columns vAlign="Middle" >
+							<Column hAlign="Center" width="10%">
+								<Text text="Status"/>
+							</Column>
+							<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet" width="10%">
+								<Text text="Type"/>
+							</Column>
+							<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet" width="10%">
+								<Text text="ASML-ID"/>
+							</Column>
+							<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet" width="10%">
+								<Text text="Customer-ID"/>
+							</Column>
+							<Column hAlign="Left" width="auto">
+								<Text text="Timeline Week 32"/>
+							</Column>
+							<Column hAlign="Left" width="10%">
+								<Text text="Data Completeness %"/>
+							</Column>
+							<Column hAlign="Left" width="10%">
+								<Text text="Supplier Dependent Uptime %"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem >
+								<cells >
+									<HBox class="sStatusIcon sapUiMediumMarginBegin" visible="{status}"><core:Icon class="" color="white" src="sap-icon://accept"/></HBox>
+									
+									<Text text="{type}"/>
+									<Text text="{asmlId}"/>
+									<Text text="{customerId}"/>
+									<customControls:CustomBar data="{system}" measure="duration" type="bars"/>
+									<FlexBox class="homeHBox22 sapUiMediumMarginEnd" justifyContent="End">
+										<items>
+											<Text class="icon circle sapUiTinyMarginEnd" visible="false"/>
+											<Text text="{dataCompleteness}"/>
+										</items>
+									</FlexBox>
+									<FlexBox class="homeHBox22 sapUiMediumMarginEnd" justifyContent="End">
+										<items>
+											<Text class="icon circle sapUiTinyMarginEnd" />
+											<Text text="{supplierUptime}"/>
+										</items>
+									</FlexBox>
+								</cells>
+							</ColumnListItem>
+							
+						</items>
+					</Table>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

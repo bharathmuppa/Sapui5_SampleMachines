@@ -1,0 +1,79 @@
+{
+	"_version": "0.0.1",
+	"start_url": "index.html",
+	"sap.app": {
+		"_version": "0.0.1",
+		"id": "PMA",
+		"type": "component",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "0.0.1"
+		},
+		"title": "{{PMA}}",
+		"openSourceComponents": [],
+		"dataSources": {}
+	},
+	"sap.ui": {
+		"_version": "0.0.1",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.38.5",
+		"rootView": "PMA.view.App",
+		"resources": {
+			"js": [{
+				"uri": "util/Constants.js"
+			}],
+			"css": [{
+				"uri": "css/styles.css",
+				"id": "PMACss"
+			}]
+		},
+		"dependencies": {},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"routing": {
+			"config": {
+				"viewType": "XML",
+				"viewPath": "PMA.view",
+				"controlId": "PMA",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "home",
+				"target": "home"
+			}, 
+			{
+				"pattern":"details",
+				"name":"details",
+				"target":"details"
+			}],
+			"targets": {
+
+				"login": {
+					"viewName": "Login"
+				},
+				"home": {
+					"viewName": "Home"
+				},
+				"details":{
+					"viewName":"Details"
+				}
+			}
+		}
+	}
+}
